@@ -1,31 +1,6 @@
 import random
+from Img import rock,paper,scissors
 
-
-rock = r'''
-    _______
----'   ____)
-      (_____)
-      (_____)
-      (____)
----.__(___)
-'''
-paper = r'''
-    _______
----'   ____)____
-          ______)
-          _______)
-         _______)
----.__________)
-'''
-
-scissors = r'''
-    _______
----'   ____)____
-          ______)
-       __________)
-      (____)
----.__(___)
-'''
 computer=[rock,paper,scissors]
 random_choice=random.choice(computer)
 random_index=random.randrange(len(computer))
