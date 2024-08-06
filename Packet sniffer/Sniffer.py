@@ -12,16 +12,16 @@ jack = True
 
 while jack:
     User = input("What protocol do you want to sniff (ARP,icmp,TCP, UDP)? If you want to exit, type 'exit': ").lower()
-    Counts=int(input("How much packets do you want:"))
+    
     
     if User == "tcp":
-        sniff(prn=packet_handler_tcp, filter="tcp", count=Counts)
+        sniff(prn=packet_handler_tcp, filter="tcp", count=3)
     elif User == "icmp":
-        sniff(prn=packet_handler_icmp,filter="icmp",count=Counts)
+        sniff(prn=packet_handler_icmp,filter="icmp",count=3)
     elif User == "arp":
-        sniff(prn=packet_handler_arp, filter="arp", count=Counts)
+        sniff(prn=packet_handler_arp, filter="arp", count=3)
     elif User == "udp":
-        sniff(prn=packet_handler_udp, filter="udp", count=Counts)
+        sniff(prn=packet_handler_udp, filter="udp", count=3)
     elif User == "exit":
         print("Thank You!")
         jack = False
