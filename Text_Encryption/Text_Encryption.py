@@ -23,7 +23,8 @@ def decrypt(Text,Shift):
     
     de=''
     for i in Uppler:
-        index=(alpha.index(i)-shift)%len(alpha)
+        index=(alpha.index(i)-Shift)%len(alpha)
+        de+=alpha[index]
     
     print(f"The Decrypted Text is:{de}")
     
@@ -37,4 +38,5 @@ elif Choose == 'De':
     decrypt(User_text,shift)
 else:
     print("Type Proper Choice !!!")
-encrypt(User_text,shift)
+
+
